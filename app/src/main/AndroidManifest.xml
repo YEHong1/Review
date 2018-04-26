@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Adapter.AdapterDemo"></activity>
+        <activity android:name=".Adapter.AdapterDemo" />
+        <activity android:name=".Activity.EditTextDemo" />
+        <activity android:name=".Activity.TextViewDemo"></activity>
     </application>
 
 </manifest>
