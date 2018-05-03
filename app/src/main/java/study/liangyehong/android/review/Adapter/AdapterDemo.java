@@ -45,12 +45,12 @@ public class AdapterDemo extends AppCompatActivity {
 
         SimpleAdapter simpleAdapter = new SimpleAdapter(getApplicationContext(),
                 listitem,R.layout.list_item,new String[]{"img","name","say"},
-                new int[]{R.id.img,R.id.name,R.id.say});
+                new int[]{R.id.img_icon,R.id.name,R.id.say});
         listview.setAdapter(simpleAdapter);
     }
 
     private void initView() {
-        img = (ImageView) findViewById(R.id.img);
+        img = (ImageView) findViewById(R.id.img_icon);
         name = (TextView) findViewById(R.id.name);
         say = (TextView) findViewById(R.id.say);
         listview = (ListView) findViewById(R.id.list_test1);

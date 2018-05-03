@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Adapter.AdapterDemo" />
         <activity android:name=".Activity.EditTextDemo" />
-        <activity android:name=".Activity.TextViewDemo"></activity>
+        <activity android:name=".Activity.TextViewDemo" />
+        <activity android:name=".Activity.GridViewDemo"></activity>
     </application>
 
 </manifest>

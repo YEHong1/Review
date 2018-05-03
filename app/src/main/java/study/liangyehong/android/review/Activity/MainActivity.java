@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        String[] str = {"ListViewDemo","EditTextDemo","TextViewDemo"};
+        String[] str = {"ListViewDemo","EditTextDemo","TextViewDemo","GridViewDemo"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1,str);
         list_test.setAdapter(adapter);
         list_test.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
                     case 2:
                         Intent intent2= new Intent(MainActivity.this,TextViewDemo.class);
                         startActivity(intent2);
+                        break;
+
+                    case 3:
+                        Intent intent3= new Intent(MainActivity.this,GridViewDemo.class);
+                        startActivity(intent3);
                         break;
                 }
             }
