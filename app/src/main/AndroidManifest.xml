@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".ListView.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,9 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Adapter.AdapterDemo" />
-        <activity android:name=".Activity.EditTextDemo" />
-        <activity android:name=".Activity.TextViewDemo" />
-        <activity android:name=".Activity.GridViewDemo"></activity>
+        <activity android:name=".EditText.EditTextDemo" />
+        <activity android:name=".TextView.TextViewDemo" />
+        <activity android:name=".GridView.GridViewDemo" />
+        <activity android:name=".Spinner.SpinnerDemo"></activity>
     </application>
 
 </manifest>

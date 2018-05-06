@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="study.liangyehong.android.review.Activity.GridViewDemo">
+    tools:context="study.liangyehong.android.review.GridView.GridViewDemo">
 
     <GridView
         android:id="@+id/grid_photo"

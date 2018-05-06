@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="study.liangyehong.android.review.Activity.TextViewDemo">
+    tools:context="study.liangyehong.android.review.TextView.TextViewDemo">
 
     <!--
         android:shadowColor:设置阴影颜色,需要与shadowRadius一起使用哦!

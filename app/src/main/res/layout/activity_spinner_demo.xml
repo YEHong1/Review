@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="study.liangyehong.android.review.Spinner.SpinnerDemo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择您的排位分段"
+        android:textSize="25sp"
+        android:textColor="#44BDED"/>
+    
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_one"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:entries="@array/data"
+        android:prompt="@string/spin_text"
+        android:spinnerMode="dialog">
+    </android.support.v7.widget.AppCompatSpinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择您的拿手英雄"
+        android:textSize="25sp"
+        android:textColor="#F5684A"/>
+
+    <android.support.v7.widget.AppCompatSpinner
+        android:id="@+id/spin_two"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:spinnerMode="dropdown">
+    </android.support.v7.widget.AppCompatSpinner>
+
+</LinearLayout>

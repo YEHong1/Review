@@ -1,4 +1,4 @@
-package study.liangyehong.android.review.Activity;
+package study.liangyehong.android.review.GridView;
 
 /**
  * Created by Jay on 2015/9/24 0024.

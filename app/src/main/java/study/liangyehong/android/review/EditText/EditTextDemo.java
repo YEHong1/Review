@@ -1,4 +1,4 @@
-package study.liangyehong.android.review.Activity;
+package study.liangyehong.android.review.EditText;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

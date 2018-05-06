@@ -1,4 +1,4 @@
-package study.liangyehong.android.review.Activity;
+package study.liangyehong.android.review.Spinner;
 
 import android.content.Context;
 import android.util.SparseArray;
@@ -14,16 +14,16 @@ import java.util.ArrayList;
 /**
  * Created by Jay on 2015/9/22 0022.
  */
-public abstract class MyAdapter<T> extends BaseAdapter {
+public abstract class myAdapter<T> extends BaseAdapter {
 
     private ArrayList<T> mData;
     private int mLayoutRes;           //布局id
 
 
-    public MyAdapter() {
+    public myAdapter() {
     }
 
-    public MyAdapter(ArrayList<T> mData, int mLayoutRes) {
+    public myAdapter(ArrayList<T> mData, int mLayoutRes) {
         this.mData = mData;
         this.mLayoutRes = mLayoutRes;
     }
@@ -53,6 +53,44 @@ public abstract class MyAdapter<T> extends BaseAdapter {
 
     public abstract void bindView(ViewHolder holder, T obj);
 
+    //添加一个元素
+    public void add(T data) {
+        if (mData == null) {
+            mData = new ArrayList<>();
+        }
+        mData.add(data);
+        notifyDataSetChanged();
+    }
+
+    //往特定位置，添加一个元素
+    public void add(int position, T data) {
+        if (mData == null) {
+            mData = new ArrayList<>();
+        }
+        mData.add(position, data);
+        notifyDataSetChanged();
+    }
+
+    public void remove(T data) {
+        if (mData != null) {
+            mData.remove(data);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void remove(int position) {
+        if (mData != null) {
+            mData.remove(position);
+        }
+        notifyDataSetChanged();
+    }
+
+    public void clear() {
+        if (mData != null) {
+            mData.clear();
+        }
+        notifyDataSetChanged();
+    }
 
 
     public static class ViewHolder {
@@ -85,6 +123,7 @@ public abstract class MyAdapter<T> extends BaseAdapter {
             return holder;
         }
 
+        @SuppressWarnings("unchecked")
         public <T extends View> T getView(int id) {
             T t = (T) mViews.get(id);
             if (t == null) {
@@ -102,7 +141,12 @@ public abstract class MyAdapter<T> extends BaseAdapter {
             return item;
         }
 
-
+        /**
+         * 获取条目位置
+         */
+        public int getItemPosition() {
+            return position;
+        }
 
         /**
          * 设置文字
@@ -129,6 +173,33 @@ public abstract class MyAdapter<T> extends BaseAdapter {
         }
 
 
+        /**
+         * 设置点击监听
+         */
+        public ViewHolder setOnClickListener(int id, View.OnClickListener listener) {
+            getView(id).setOnClickListener(listener);
+            return this;
+        }
+
+        /**
+         * 设置可见
+         */
+        public ViewHolder setVisibility(int id, int visible) {
+            getView(id).setVisibility(visible);
+            return this;
+        }
+
+        /**
+         * 设置标签
+         */
+        public ViewHolder setTag(int id, Object obj) {
+            getView(id).setTag(obj);
+            return this;
+        }
+
+        //其他方法可自行扩展
+
     }
 
 }
+

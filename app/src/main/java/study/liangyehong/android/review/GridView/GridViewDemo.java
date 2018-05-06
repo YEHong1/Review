@@ -1,4 +1,4 @@
-package study.liangyehong.android.review.Activity;
+package study.liangyehong.android.review.GridView;
 
 
 import android.content.Context;
